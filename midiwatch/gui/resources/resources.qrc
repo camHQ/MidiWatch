@@ -1,0 +1,21 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="fonts">
+        <file alias="FiraCode.ttf">fonts/FiraCode-VariableFont_wght.ttf</file>
+        <file alias="Roboto.ttf">fonts/Roboto-VariableFont_wdth,wght.ttf</file>
+    </qresource>
+
+    <qresource prefix="images">
+        <file alias="midiwatch-icon.svg">images/midiwatch-icon.svg</file>
+        <file alias="midiwatch-logo.svg">images/midiwatch-logo.svg</file>
+        <file alias="arrow_down.svg">images/arrow_down.svg</file>
+    </qresource>
+
+    <qresource prefix="legal">
+        <file alias="CREDITS.txt">legal/CREDITS.txt</file>
+    </qresource>
+
+    <qresource prefix="styles">
+        <file alias="main.qss">styles/main.qss</file>
+    </qresource>
+</RCC>

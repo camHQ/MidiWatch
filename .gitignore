@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+
+# Environments
+.venv/
+
+# IDE and Editors
+.vscode/
+.idea/
+*.swp
+
+# PySide6 - Generated files
+*_rc.py
+ui_*.py
+
+# Distribution / packaging
+build/
+dist/
+*.spec
+package/
+build.py
+*.sh
+*.deb
+*.exe
+
+# Logging
+logs/

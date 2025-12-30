@@ -1,0 +1,98 @@
+MidiWatch - Third-Party Software Notices
+===================================================
+
+This software is distributed under the GNU General Public License v3.0 (GPLv3) and includes third-party software components. The licenses and copyright notices for these components are listed below.
+
+===================================================
+1. PySide6 (Qt for Python)
+===================================================
+
+MidiWatch is built using PySide6, the official Python module from the Qt for Python project, which provides access to the complete Qt 6.0+ framework.
+
+Copyright (C) 2025 The Qt Company Ltd and other contributors
+
+This component is licensed under the GNU Lesser General Public License v3.0 (LGPLv3). Full license text: https://www.gnu.org/licenses/lgpl-3.0.html
+
+In accordance with the LGPL, you may modify the Qt libraries. For instructions on using your own version of Qt/PySide6, see the application source code.
+
+===================================================
+2. Python 3.12
+===================================================
+
+This application bundles the Python 3.12 runtime environment.
+
+Copyright (c) 2001-2025 Python Software Foundation. All Rights Reserved.
+
+This component is licensed under the Python Software Foundation License Version 2. Full license text: https://docs.python.org/3/license.html
+
+===================================================
+3. Mido
+===================================================
+
+Mido (MIDI Objects for Python).
+Mido is a library for working with MIDI messages and ports.
+
+Copyright (c) 2013 Ole Martin Bjørndalen
+Copyright (c) 2023 Raphaël Doursenaud and contributors
+
+Mido is licensed under the MIT License (see full text in Section 6).
+
+===================================================
+4. python-rtmidi
+===================================================
+
+python-rtmidi is a Python wrapper for the RtMidi C++ library implemented using Cython.
+
+Copyright (c) 2012-2023 Christopher Arndt
+
+python-rtmidi is licensed under the MIT License (see full text in Section 6).
+
+===================================================
+5. platformdirs
+===================================================
+
+platformdirs - A small Python module for determining appropriate platform-specific directories, such as a "documents" folder or "downloads" folder on the user's machine.
+
+Copyright (c) 2010-2025 The platformdirs developers
+
+platformdirs is licensed under the MIT License (see full text in Section 6).
+
+===================================================
+6. Full Text of MIT License
+===================================================
+
+The following MIT License applies to: Mido, python-rtmidi, and platformdirs.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+===================================================
+7. Fonts
+===================================================
+
+MidiWatch uses the following third-party fonts, which are distributed under the SIL Open Font License, Version 1.1 (OFL).
+
+7.1 Fira Code
+
+Fira Code is a monospaced font designed for programming.
+
+Copyright (c) 2014, The Fira Code Project Authors
+https://github.com/tonsky/FiraCode
+
+This font is licensed under the SIL Open Font License, Version 1.1. The full license text is provided in the accompanying OFL.txt file distributed with the font (e.g. legal/fonts/OFL_FiraCode.txt in the source tree).
+
+7.2 Roboto
+
+Roboto is a sans-serif typeface family designed for user interfaces and general text.
+
+Copyright (c) 2011 The Roboto Project Authors
+https://fonts.google.com/specimen/Roboto
+
+This font is licensed under the SIL Open Font License, Version 1.1. The full license text is provided in the accompanying OFL.txt file distributed with the font (e.g. legal/fonts/OFL_Roboto.txt in the source tree).
+
+===================================================
+End of Third-Party Notices
+===================================================

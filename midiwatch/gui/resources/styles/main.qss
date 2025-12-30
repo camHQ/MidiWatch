@@ -1,0 +1,276 @@
+/*
+This file is part of MidiWatch.
+Copyright (C) 2025 cam84
+
+MidiWatch is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MidiWatch is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MidiWatch. If not, see <https://www.gnu.org/licenses/>.
+*/
+
+/* ==========================================================================
+   Color Palette :
+       - Main Background : #0F0F0F
+       - Secondary Surface : #1A1A1A
+       - Elevation : #252525
+       - Primary Text : #E8E8E8
+       - Secondary Text : #A0A0A0
+       - Primary Accent : #00D9FF
+       - Secondary Accent : #008B8B
+       - Borders : #2A2A2A
+       - Error/Alert : #FF3366
+       - Success/Active : #00E899
+       - Warning : #FF9500
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+QWidget {
+    background-color: #1A1A1A;
+    color: #E8E8E8;
+    font-family: "Roboto", sans-serif;
+}
+
+#centralWidget, QStatusBar {
+    background-color: #0F0F0F;
+}
+
+.statusLabel, .toolBarLabel {
+    background: transparent;
+    font-size: 8pt;
+    font-weight: 600;
+}
+
+
+/* ==========================================================================
+   Header Container
+   ========================================================================== */
+
+#mainTitle {
+    background-color: #0F0F0F;
+}
+
+
+/* ==========================================================================
+   ToolBar section
+   ========================================================================== */
+
+/* QComboBox
+   ===================================== */
+
+.comboBox {
+    border: 1px solid #2A2A2A;
+    border-radius: 4px;
+    padding: 4px 6px;
+    selection-color: #00D9FF;
+    font-size: 10pt;
+}
+
+.comboBox:on {
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+.comboBox:hover {
+    border: 1px solid #00D9FF;
+}
+
+.comboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+.comboBox::down-arrow {
+    image: url(:/images/arrow_down.svg);
+    width: 8px;
+    height: 5px;
+}
+
+.comboBox QAbstractItemView {
+    border: 1px solid #2A2A2A;
+    background-color: #252525;
+}
+
+/* QPushButton
+   ===================================== */
+
+.squareButton {
+    border: 1px solid #2A2A2A;
+    border-radius: 4px;
+}
+.squareButton:checked {
+    background-color: #00D9FF;
+ }
+ .squareButton:hover {
+    background-color: #00D9FF;
+ }
+ .squareButton:pressed {
+    border: 2px solid #00D9FF;
+    background-color: #00D9FF;
+ }
+
+
+/* ==========================================================================
+   QTalbleView
+   ========================================================================== */
+
+QTableView {
+    border: 1px solid #2A2A2A;
+    font-family: "fira-code";
+    font-size: 10pt;
+}
+
+QTableView::item {
+    padding-left: 4px;
+    border-bottom: 1px solid #2A2A2A;
+}
+
+QTableView::item:hover {
+    background-color: transparent;
+}
+
+/* QHeaderView
+   ===================================== */
+
+QHeaderView {
+    background-color: #1A1A1A;
+    font-size: 10pt;
+    font-weight: 600;
+}
+
+QHeaderView::section {
+    padding-left: 8px;
+    background-color: #1A1A1A;
+}
+
+/* QScrollBar
+   ===================================== */
+
+QTableView QScrollBar:vertical {
+    border: none;
+    background-color: #1A1A1A;
+    width: 6px;
+    margin: 32px 0 1px 0;
+ }
+
+QTableView QScrollBar::handle:vertical {
+    border: none;
+    border-radius: 3px;
+    background: #333333;
+    min-height: 40px;
+ }
+
+QTableView QScrollBar::handle:vertical:hover {
+    background-color:#4D4D4D;
+}
+
+QTableView QScrollBar::handle:vertical:pressed {
+    background-color:#00D9FF;
+}
+
+QTableView QScrollBar::sub-line:vertical {
+    subcontrol-origin: margin;
+    subcontrol-position: top;
+    height: 30px;
+    border-top: 1px solid #3A3A3A;
+    border-bottom: 1px solid #131313;
+    background-color: #202020;
+ }
+
+QTableView QScrollBar::add-line:vertical {
+    subcontrol-origin: margin;
+    subcontrol-position: bottom;
+    height: 0;
+    border: none;
+    background-color: #2A2A2A;
+}
+
+QTableView QScrollBar::up-arrow:vertical, 
+QTableView QScrollBar::down-arrow:vertical {
+    width: 0;
+    height: 0;
+    border: 0;
+    background-color: none;
+}
+
+QTableView QScrollBar::add-page:vertical, 
+QTableView QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+
+/* ==========================================================================
+   Footer section
+   ========================================================================== */
+
+#footer QLabel, 
+#footer QPushButton {
+    color: #888888;
+    background: transparent;
+    font-size: 9pt;
+}
+
+#footer QPushButton {
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+}
+
+#footer QPushButton:hover {
+    color: #00D9FF;
+}
+
+#footer QPushButton:pressed {
+    color: #008B8B;
+}
+
+
+/* ==========================================================================
+   About Dialog
+   ========================================================================== */
+
+.dialogTabButton {
+    border: 1px solid #393939;
+    background-color: #232323;
+    border-radius: 4px;
+    padding: 6px 10px;
+}
+
+.dialogTabButton:hover {
+    background-color: #282828;
+}
+
+.dialogTabButton:checked {
+    border: 1px solid #11417d;
+    background-color: #1b2128;
+}
+
+/* About Tab
+   ===================================== */
+
+.dialogText {
+    font-size: 11pt;
+}
+
+/* Credits Tab
+   ===================================== */
+
+#creditsPlainText {
+    border: 1px solid #2A2A2A;
+    padding: 4px;
+    font-size: 11pt;
+}

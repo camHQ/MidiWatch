@@ -1,0 +1,1 @@
+from .loader import initialize_resources
