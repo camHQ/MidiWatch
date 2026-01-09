@@ -132,7 +132,7 @@ class MidiPortManager:
         Arguments:
             port_name: The name of the MIDI input port to open.
         """
-        logger.debug("Attempting to open MIDI input port: '%s'.", port_name)
+        logger.debug("Attempting to open MIDI input port: '%s'", port_name)
 
         try:
             # Close the previous port if it exists
@@ -158,7 +158,7 @@ class MidiPortManager:
         Arguments:
             port_name: The name of the MIDI output port to open.
         """
-        logger.debug("Attempting to open MIDI output port: '%s'.", port_name)
+        logger.debug("Attempting to open MIDI output port: '%s'", port_name)
 
         try:
             # Close the previous port if it exists
