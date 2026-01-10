@@ -22,6 +22,7 @@ build.py
 *.sh
 *.deb
 *.exe
+*.ifp
 
 # Logging
 logs/

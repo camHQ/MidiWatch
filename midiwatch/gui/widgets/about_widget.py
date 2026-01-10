@@ -92,6 +92,7 @@ class AboutWidget(QWidget):
         self.setLayout(layout_vbox)
 
     def _setup_connections(self):
+        """Connect signals to their respective slots."""
         self._github_repo_lbl.linkActivated.connect(self._open_link)
         self._licence_lbl.linkActivated.connect(self._open_link)
 

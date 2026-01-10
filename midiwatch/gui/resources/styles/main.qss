@@ -230,12 +230,24 @@ QTableView QScrollBar::sub-page:vertical {
     text-decoration: underline;
 }
 
-#footer QPushButton:hover {
+#footer QPushButton#aboutButton:hover {
     color: #00D9FF;
 }
 
-#footer QPushButton:pressed {
+#footer QPushButton#aboutButton:pressed {
     color: #008B8B;
+}
+
+#footer QPushButton#updateNotification {
+    color: #FF3366;
+}
+
+#footer QPushButton#updateNotification:hover {
+    color: #FF5588;
+}
+
+#footer QPushButton#updateNotification:pressed {
+    color: #CC0033;
 }
 
 

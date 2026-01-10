@@ -26,7 +26,7 @@ from PySide6.QtWidgets import (
     QMessageBox,
 )
 from PySide6.QtGui import QPixmap
-from PySide6.QtCore import Qt, Slot, QStandardPaths
+from PySide6.QtCore import Qt, Slot, QStandardPaths, QTimer
 
 from .widgets import (
     PortSelector,
@@ -40,11 +40,12 @@ from .widgets import (
     FooterWidget,
 )
 
-from .threads import MidiListenerThread
+from .threads import MidiListenerThread, UpdateCheckerThread
 from .controllers import MidiController
 from .models import MidiMessageHumanModel, MidiMessageHexModel, MidiMessageBinaryModel
 from midiwatch.core.midi import MidiPortManager
 from midiwatch.core.exporters import CsvExporter
+from midiwatch.constants import APP_VERSION
 
 
 class MainWindow(QMainWindow):
@@ -63,7 +64,11 @@ class MainWindow(QMainWindow):
         self._hex_view = HexTableView(self._hex_model)
         self._binary_view = BinaryTableView(self._binary_model)
 
+        self._update_checker = None
+
         self._initialize_ui()
+
+        QTimer.singleShot(3000, self._check_for_updates)
 
     def _initialize_ui(self) -> None:
         """Initialize UI"""
@@ -112,7 +117,7 @@ class MainWindow(QMainWindow):
         )
 
         # Footer
-        footer_fw = FooterWidget(self)
+        self._footer_fw = FooterWidget(self)
 
         # Main vertical layout containing all UI elements
         main_vbox = QVBoxLayout()
@@ -122,7 +127,7 @@ class MainWindow(QMainWindow):
         main_vbox.addLayout(toolbar_hbox)
         main_vbox.addSpacing(24)
         main_vbox.addWidget(self._table_stack)
-        main_vbox.addWidget(footer_fw, alignment=Qt.AlignmentFlag.AlignCenter)
+        main_vbox.addWidget(self._footer_fw, alignment=Qt.AlignmentFlag.AlignCenter)
 
         # Central widget of the main window
         central_widget = QWidget()
@@ -131,6 +136,8 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(central_widget)
 
     def _setup_connections(self) -> None:
+        """Connect signals to their respective slots."""
+
         # Update the MIDI connection status indicator.
         self._midi_controller.listening_changed.connect(self.midi_status.set_connected)
 
@@ -155,6 +162,15 @@ class MainWindow(QMainWindow):
 
         # Export
         self._action_buttons.export_clicked.connect(self._export_models)
+
+    @Slot()
+    def _check_for_updates(self):
+        """Launch update check in background thread."""
+        self._update_checker = UpdateCheckerThread(APP_VERSION)
+        self._update_checker.update_available.connect(
+            self._footer_fw.show_update_notification
+        )
+        self._update_checker.start()
 
     @Slot()
     def _clear_models(self) -> None:
