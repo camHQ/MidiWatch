@@ -35,7 +35,7 @@ Mido is a library for working with MIDI messages and ports.
 Copyright (c) 2013 Ole Martin Bjørndalen
 Copyright (c) 2023 Raphaël Doursenaud and contributors
 
-Mido is licensed under the MIT License (see full text in Section 6).
+Mido is licensed under the MIT License (see full text in Section 7).
 
 ===================================================
 4. python-rtmidi
@@ -45,7 +45,7 @@ python-rtmidi is a Python wrapper for the RtMidi C++ library implemented using C
 
 Copyright (c) 2012-2023 Christopher Arndt
 
-python-rtmidi is licensed under the MIT License (see full text in Section 6).
+python-rtmidi is licensed under the MIT License (see full text in Section 7).
 
 ===================================================
 5. platformdirs
@@ -55,10 +55,20 @@ platformdirs - A small Python module for determining appropriate platform-specif
 
 Copyright (c) 2010-2025 The platformdirs developers
 
-platformdirs is licensed under the MIT License (see full text in Section 6).
+platformdirs is licensed under the MIT License (see full text in Section 7).
 
 ===================================================
-6. Full Text of MIT License
+6. Requests
+===================================================
+
+Requests is an elegant and simple HTTP library for Python, built for human beings.
+
+Copyright (c) 2019 Kenneth Reitz
+
+Requests is licensed under the Apache License 2.0 (see full text in Section 8).
+
+===================================================
+7. Full Text of MIT License
 ===================================================
 
 The following MIT License applies to: Mido, python-rtmidi, and platformdirs.
@@ -70,12 +80,24 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ===================================================
-7. Fonts
+8. Full Text of Apache License 2.0
+===================================================
+
+The following Apache License 2.0 applies to: Requests.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+===================================================
+9. Fonts
 ===================================================
 
 MidiWatch uses the following third-party fonts, which are distributed under the SIL Open Font License, Version 1.1 (OFL).
 
-7.1 Fira Code
+9.1 Fira Code
 
 Fira Code is a monospaced font designed for programming.
 
@@ -84,7 +106,7 @@ https://github.com/tonsky/FiraCode
 
 This font is licensed under the SIL Open Font License, Version 1.1. The full license text is provided in the accompanying OFL.txt file distributed with the font (e.g. legal/fonts/OFL_FiraCode.txt in the source tree).
 
-7.2 Roboto
+9.2 Roboto
 
 Roboto is a sans-serif typeface family designed for user interfaces and general text.
 
