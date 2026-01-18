@@ -1,6 +1,6 @@
 # MidiWatch
 
-[![Release](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/yourname/midiwatch/releases) [![License](https://img.shields.io/badge/license-GPL--3.0-green)](LICENSE) [![Python](https://img.shields.io/badge/python-3.12-blue)](https://www.python.org/) ![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux-orange)
+[![Release](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/camHQ/MidiWatch/releases) [![License](https://img.shields.io/badge/license-GPL--3.0-green)](LICENSE) [![Python](https://img.shields.io/badge/python-3.10+-blue)](https://www.python.org/) ![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20GNU/Linux-orange)
 
 
 ## Overview
@@ -23,12 +23,52 @@ Download the latest Windows `.exe` installer from the [Releases page](https://gi
 
 > Note: Windows may show a SmartScreen warning because this installer is not digitally signed. This is normal for open-source software. Click "More info" then "Run anyway" to proceed with the installation.
 
-### Linux
+### GNU/Linux
 
-Download the latest Linux `.deb` package from the [Releases page](https://github.com/camHQ/MidiWatch/releases) and install it:
+Download the latest GNU/Linux `.deb` package from the [Releases page](https://github.com/camHQ/MidiWatch/releases) and install it:
 
 ```shell
-sudo apt install ./midiwatch-*-linux.deb
+sudo apt install ./midiwatch-*-amd64.deb
+```
+
+### Install from Source
+
+#### 1. Clone the repository
+
+```shell
+git clone https://github.com/camHQ/MidiWatch.git
+cd MidiWatch
+```
+
+#### 2. Create a virtual environment
+
+```shell
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+#### 3. Install dependencies
+
+```shell
+pip install -r requirements.txt
+```
+
+> Note: If the installation fails (often on Python 3.13+), you are missing build tools. Run this command and try again:
+>
+>```shell
+>sudo apt install build-essential python3-dev libasound2-dev libjack-jackd2-dev pkg-config
+>```
+
+#### 4. Compile resources
+
+```shell
+pyside6-rcc midiwatch/gui/resources/resources.qrc -o midiwatch/gui/resources/resources_rc.py
+```
+
+#### 5. Run the application
+
+```shell
+python -m midiwatch
 ```
 
 ## Status
