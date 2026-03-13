@@ -2,11 +2,13 @@
 
 [![Release](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/camHQ/MidiWatch/releases) [![License](https://img.shields.io/badge/license-GPL--3.0-green)](LICENSE) [![Python](https://img.shields.io/badge/python-3.10+-blue)](https://www.python.org/) ![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20GNU/Linux-orange)
 
-
 ## Overview
 
 MidiWatch is a desktop application that visualizes incoming MIDI 1.0 messages in real-time from any MIDI source. It displays MIDI data in three formats: Human-readable, Hexadecimal, and Binary allowing you to inspect and understand MIDI data at different levels of abstraction. Captured MIDI data can be exported to CSV format for further analysis.
 
+<div align="center">
+    <img src="./assets/midiwatch-screenshot.png" width=440 alt="MidiWatch Screenshot">
+</div>
 
 ## Features
 
